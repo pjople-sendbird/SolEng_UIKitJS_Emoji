@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+.sendbird-conversation {
+  flex: 1
+}
+.custom-message-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.message > button {
+  border: 2px solid var(--sendbird-light-primary-100);
+  border-radius: 50%;
+  outline: none;
+  background-color: transparent;
+  margin: 0 10px;
+  transition: all 0.35s;
+}
+.message > button:hover {
+  background-color: var(--sendbird-light-primary-100);
+  border-color: var(--sendbird-light-primary-300);
+}
+.emojis-list[hidden] {
+  display: none;
+}
+.emojis-list {
+  list-style: none;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border: 1px solid var(--sendbird-dark-onlight-04);
+  border-radius: 2rem;
+  box-shadow: var(--sendbird-light-shadow-02);
+}
+.emojis-list > li {
+  margin: 0 8px;
+}
+.emojis-list > li > button {
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  padding: 3px 5px;
+  margin: 0;
+  background-color: transparent;
+  transition: all 0.35s;
+  box-shadow: none;
+  transform: scale(1);
+}
+.emojis-list > li > button:hover {
+  transform: scale(1.1);
+  box-shadow: var(--sendbird-light-shadow-01);
+}
+.emojis-list > li > button > img {
+  width: 35px;
+  height: 35px;
+}
