@@ -8,7 +8,7 @@ import "sendbird-uikit/dist/index.css";
 ReactDOM.render(
   <React.StrictMode>
     <SendBirdProvider
-      userId={process.env.REACT_APP_USER_ID}
+      userId={'user7'}
       appId={process.env.REACT_APP_SB_APP_ID}
     >
       <App />

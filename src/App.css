@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 .message > button {
   border: 2px solid var(--sendbird-light-primary-100);
@@ -35,15 +36,17 @@
 .emojis-list[hidden] {
   display: none;
 }
-.emojis-list {
+.emojis-list, .reactions-list {
   list-style: none;
   width: fit-content;
   display: flex;
   flex-direction: row;
   padding: 10px;
   margin: 0 0 10px 0;
-  border: 1px solid var(--sendbird-dark-onlight-04);
   border-radius: 2rem;
+}
+.emojis-list {
+  border: 1px solid var(--sendbird-dark-onlight-04);
   box-shadow: var(--sendbird-light-shadow-02);
 }
 .emojis-list > li {
@@ -67,4 +70,50 @@
 .emojis-list > li > button > img {
   width: 35px;
   height: 35px;
+}
+
+.reactions-list-container {
+  margin-top: -8px;
+  flex-basis: 100%;
+  /* flex-grow: 0; */
+}
+.reactions-list {
+  border: 1px solid var(--sendbird-dark-onlight-04);
+}
+.reactions-list > li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.reactions-list > li {
+  background-color: #d8d6d6;
+  border-radius: 1.5rem;
+  padding: 4px 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.reactions-list > li > .count {
+  margin: 0 7px;
+  font-weight: 300;
+}
+.reactions-list > li > .reaction-users-list {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  font-size: 14px;
+  gap: 3px;
+}
+.reactions-list > li > .reaction-users-list[hidden] {
+  display: none;
+}
+.reactions-list > li:hover > .reaction-users-list {
+  display: flex;
 }
