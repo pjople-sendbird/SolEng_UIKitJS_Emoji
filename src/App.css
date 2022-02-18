@@ -117,3 +117,8 @@
 .reactions-list > li:hover > .reaction-users-list {
   display: flex;
 }
+
+.channel-wrapper {
+  height: 100%;
+  width: 100%;
+}

@@ -13,10 +13,11 @@ function App({config}) {
   const [currentChannelUrl, setCurrentChannelUrl] = useState('')
   return (
     <div className="App">
-      <ChannelList onChannelSelect={channel => setCurrentChannelUrl(channel.url)} />
-      <Channel
-        channelUrl={currentChannelUrl}
-        renderChatItem={({channel, message, onDeleteMessage, onUpdateMessage, emojiContainer}) =>
+      <ChannelList onChannelSelect={channel => setCurrentChannelUrl(channel?.url)} />
+      <div className="channel-wrapper">
+        <Channel
+          channelUrl={currentChannelUrl}
+          renderChatItem={({channel, message, onDeleteMessage, onUpdateMessage, emojiContainer}) =>
           <ChatItem
             message={message}
             channel={channel}
@@ -26,6 +27,7 @@ function App({config}) {
             userId={config.userId}
           />}
       />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ReactionsList = ({reactions, emojis, isOwnMessage}) => {
+const ReactionsList = ({reactions = [], emojis, isOwnMessage}) => {
   const getEmojiFromReaction = reaction => emojis.find(emoji => emoji.key === reaction.key);
 
   if (!reactions.length) {
